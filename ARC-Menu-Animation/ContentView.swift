@@ -21,30 +21,30 @@ struct ContentView: View {
             ZStack {
                 Circle()
                     .stroke()
-                    .frame(width: 150, height: 150)
+                    .frame(width: diameter, height: diameter)
                     .opacity(0)
                 
                 Image(systemName: "circle.bottomhalf.fill")
                     .font(.title)
-                    .offset(x: -75)
+                    .offset(x: -radius)
                     .rotationEffect(.degrees(iconPosition ? 0 : -180))
                     .animation(.easeInOut(duration: 1).delay(0.3), value: iconPosition)
                 
                 Image(systemName: "circle.dashed.inset.fill")
                     .font(.title)
-                    .offset(x: -75)
+                    .offset(x: -radius)
                     .rotationEffect(.degrees(iconPosition ? 30 : -180))
                     .animation(.easeInOut(duration: 1).delay(0.2), value: iconPosition)
                 
                 Image(systemName: "target")
                     .font(.title)
-                    .offset(x: -75)
+                    .offset(x: -radius)
                     .rotationEffect(.degrees(iconPosition ? 60 : -180))
                     .animation(.easeInOut(duration: 1).delay(0.1), value: iconPosition)
                 
                 Image(systemName: "circle.tophalf.fill")
                     .font(.title)
-                    .offset(x: -75)
+                    .offset(x: -radius)
                     .rotationEffect(.degrees(iconPosition ? 90 : -180))
                     .animation(.easeInOut(duration: 1), value: iconPosition)
             }
@@ -87,3 +87,5 @@ struct ContentView: View {
 
 private let easeInOutWithCustomDelay: Animation = .easeInOut.delay(0.25)
 private let customAnimationWithTimingCurve: Animation = .timingCurve(0.68, -0.6, 0.32, 1.6).delay(0.25)
+private let diameter: CGFloat = 150
+private let radius: CGFloat = diameter / 2
