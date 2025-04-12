@@ -70,6 +70,7 @@ struct BiDirectionalArcMenuAnimationView: View {
                 
             }
             .frame(width: 300, height: 200, alignment: .center)
+            .foregroundStyle(.red)
             .clipShape(Rectangle().offset(x: -20, y: -80))
             .offset(x: -5, y: 335)
 
