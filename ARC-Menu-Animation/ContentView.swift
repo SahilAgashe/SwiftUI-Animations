@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    var body: some View {
+        Text("Thank You God for this learning opportunity!")
+    }
+}
+struct ArcMenuAnimationView: View {
     
     // Initial animation states
     @State private var FABAngle = false
@@ -80,7 +85,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ArcMenuAnimationView()
         .preferredColorScheme(.dark)
 }
 

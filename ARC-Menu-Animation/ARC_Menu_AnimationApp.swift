@@ -11,7 +11,7 @@ import SwiftUI
 struct ARC_Menu_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ArcMenuAnimationView()
         }
     }
 }
