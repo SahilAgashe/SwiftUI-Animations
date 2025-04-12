@@ -19,6 +19,7 @@ struct ArcMenuAnimationView: View {
                 .font(.largeTitle)
             
             ZStack {
+                // Hidden Motion Path
                 Circle()
                     .stroke()
                     .frame(width: diameter, height: diameter)
